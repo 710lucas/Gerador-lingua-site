@@ -1,0 +1,23 @@
+<head>
+  <title>Gerador De Lingua</title>
+  <link rel="stylesheet" href="estilo.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+  <script src="gerar.js"></script>
+
+  <div class="programa">
+    <input type="text" placeholder="insira sua frase" id="frase"/>
+    <br>
+    <button type="button" onclick="gerar_palavra(silabas)">enviar</button>
+    <p>Traduzido: </p>
+    <p id="traduzido" class="traduzido"></p>
+  </div>
+
+  <div class="sobre">
+    <h1>Gerador de linguas</h1>
+    <h3>Esse programa busca gerar palavras aleatorias usando silabas do portugues baseadas nas palavras que voce escreveu</h3>
+  </div>
+</body>

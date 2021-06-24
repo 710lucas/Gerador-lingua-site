@@ -1,0 +1,11 @@
+image: alpine:latest
+
+pages:
+        stage: deploy
+        script:
+                - echo "lol, he cant be"
+        artifacts:
+                paths:
+                        - src
+        only:
+                - master

@@ -1,0 +1,66 @@
+.programa{
+  text-align: center;
+}
+
+input{
+  background: rgba(0,0,0,0);
+  border: none;
+  margin: 2vw 10vw;
+  border-bottom: solid;
+  border-bottom-width: 0.2rem;
+  border-bottom-color: hsl(264, 3%, 42%);
+  border-radius: 0.1vw;
+  transition: 0.5s;
+  outline: none;
+}
+
+input, textarea{
+  text-align: center;
+  color: hsl(265, 9%, 76%);
+  font-size: 1.25rem;
+  width: auto;
+}
+
+input:focus{
+  border-color: hsl(189, 54%, 28%);
+}
+
+button{
+  background: rgba(0,0,0,0);
+  border: solid;
+  border-color: hsl(265, 9%, 76%);
+  border-radius: 0.3vw;
+  color: hsl(265, 9%, 76%);
+  padding: 0.3rem 0.5rem;
+}
+
+button, textarea{
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.sobre{
+  text-align: center;
+  margin: 5rem 0;
+  margin-top: 10rem;
+}
+
+@font-face{
+  font-family: ubuntu;
+  src:url("./ubuntu.ttf");
+}
+
+body{
+  background-color: hsl(265, 11%, 14%);
+  font: Ubuntu;
+  font-family: ubuntu;
+  color: hsl(264, 24%, 71%);
+}
+
+.traduzido{
+  color: hsl(264, 20%, 73%);
+  border-bottom: solid;
+  border-color: hsl(105, 39%, 64%);
+  margin: 0 25%;
+  padding-bottom: 0.5rem;
+}
