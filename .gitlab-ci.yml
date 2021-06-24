@@ -6,6 +6,6 @@ pages:
                 - echo "lol, he cant be"
         artifacts:
                 paths:
-                        - src
+                        - public
         only:
                 - master
