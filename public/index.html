@@ -10,19 +10,18 @@
   <script src="criptografia.js" defer></script>
 
   <div class="programa">
-    <input type="text" placeholder="insira sua frase" id="frase"/>
+    <div contenteditable class="textarea" type="text" id="frase">insira sua frase</div>
     <br>
     <button type="button" onclick="gerar_palavra(silabas, 1)">enviar</button>
     <p>Traduzido: </p>
     <p id="traduzido" class="traduzido"></p>
     <p> Traduzir um arquivo: </p>
-    <input type="file" id="input" />
+    <input type="file" id="input" class="input"/>
     <br>
-
-    <a id="download_link_trad">
+    <a id="download_link_trad" href="">
     <button type="button" onclick="download_trad()" style="display:none;" id="download_trad">Fazer download do arquivo traduzido</button>
     </a>
-    <a id="download_link_dic">
+    <a id="download_link_dic" href="">
     <button type="button" onclick="download_dic()" style="display:none;" id="download_dic">Fazer download do dicionario</button>
     </a>
 

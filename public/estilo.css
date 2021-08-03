@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-input{
+input, .textarea{
   background: rgba(0,0,0,0);
   border: none;
   margin: 2vw 10vw;
@@ -14,11 +14,15 @@ input{
   outline: none;
 }
 
-input, textarea{
+input, .textarea{
   text-align: center;
   color: hsl(265, 9%, 76%);
   font-size: 1.25rem;
   width: auto;
+}
+
+.input{
+  width: 50%;
 }
 
 input:focus{

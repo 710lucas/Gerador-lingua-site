@@ -15,12 +15,14 @@ fetch('https://lucaspb710.gitlab.io/geradordelingua-site/silabas.txt')
 function gerar_palavra(silabas, modo){
   palavras_geradas = [];
   palavras_pt = [];
+  str_final = "";
   var tamanhoP, tamanhoGerado;
 
   switch(modo){
     case 1:
       //Frase que o usuario deseja que seja modificada
-      var input = document.getElementById("frase").value;
+      //var input = document.getElementById("frase").value;
+      var input = document.getElementById("frase").innerText;
       break;
     case 2:
       var input = conteudo_arquivo;
@@ -31,16 +33,22 @@ function gerar_palavra(silabas, modo){
 
   //garantir que o usuario tenho escrito algo
   if(input != null && input != "" && input != " "){
-    var palavras = input.split(" "); //Cria uma array das palavras que a pessoa digitou
+    var palavras = input.replace("\n", " ").replace(/\0/g, " ").split(" "); //Cria uma array das palavras que a pessoa digitou
     }
   else
     return
 
+  for(var i = 0; i<palavras.length; i++){
+    if(palavras[i] == ""){
+      palavras.splice(i,1);
+    }
+  }
 
   for(var i = 0; i<palavras.length; i++){
     palavras[i] = palavras[i].replace(/[,.!?;]/g, '');
-    console.log(palavras)
+    console.log(palavras[i])
     console.log(input)
+
     //basicamente tenta chutar a quantidade de
     //silabas que uma palavra tem
     if(palavras[i].length >= 4){
@@ -50,7 +58,7 @@ function gerar_palavra(silabas, modo){
         tamanhoP = (palavras[i].length+1)/2;
     }
     else
-      tamanhoP = palavras.length-1;
+      tamanhoP = palavras[i].length;
 
     //Gera um numero aleatorio de silabas que a palavra
     //final terá que ter, garantindo que ela tenha pelo
