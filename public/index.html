@@ -6,18 +6,36 @@
 
 <body>
 
-  <script src="gerar.js"></script>
+  <script src="gerar.js" defer></script>
+  <script src="criptografia.js" defer></script>
 
   <div class="programa">
     <input type="text" placeholder="insira sua frase" id="frase"/>
     <br>
-    <button type="button" onclick="gerar_palavra(silabas)">enviar</button>
+    <button type="button" onclick="gerar_palavra(silabas, 1)">enviar</button>
     <p>Traduzido: </p>
     <p id="traduzido" class="traduzido"></p>
+    <p> Traduzir um arquivo: </p>
+    <input type="file" id="input" />
+    <br>
+
+    <a id="download_link_trad">
+    <button type="button" onclick="download_trad()" style="display:none;" id="download_trad">Fazer download do arquivo traduzido</button>
+    </a>
+    <a id="download_link_dic">
+    <button type="button" onclick="download_dic()" style="display:none;" id="download_dic">Fazer download do dicionario</button>
+    </a>
+
+  </div>
+
+  <div class="dicionario">
+    <h2>Dicionário</h2>
+    <p id="dic">O dicionário basicamente mostra a tradução para cada palavra individual que foi traduzida<br>
+    Digite algo acima e clique em Enviar para ver como funciona!</p>
   </div>
 
   <div class="sobre">
     <h1>Gerador de linguas</h1>
-    <h3>Esse programa busca gerar palavras aleatorias usando silabas do portugues baseadas nas palavras que voce escreveu</h3>
+    <h3>Esse programa busca gerar palavras aleatorias usando silabas do portugues baseadas nas palavras que voce escreveu<br>Ao baixar os 2 arquivos, você estará baixando o dicionario e o arquivo traduzido, o dicionario mostra as palavras na lingua gerada e em portugues.</h3>
   </div>
 </body>
