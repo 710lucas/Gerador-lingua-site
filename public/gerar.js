@@ -126,7 +126,7 @@ function download_trad(){
 
 function download_dic(){
 
-  var dic;
+  var dic = "";
 
   for(var i = 0; i<palavras_geradas.length; i++){
     dic += palavras_geradas[i] + " -> " +palavras_pt[i] + "\n";
