@@ -57,6 +57,9 @@ function gerar_palavra(silabas, modo){
       else
         tamanhoP = (palavras[i].length+1)/2;
     }
+    else if(palavras[i].length == 1){
+      tamanhoP = 2
+    }
     else
       tamanhoP = palavras[i].length;
 
